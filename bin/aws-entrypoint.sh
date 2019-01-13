@@ -1,6 +1,8 @@
 #!/bin/bash
 set -e
 
+elasticsearch-keystore create
+
 if [[ -z "${AWS_ACCESS_KEY_ID}" ]]; then
   echo >&2 "error: expect AWS_ACCESS_KEY_ID environment variable"
   exit 1
